@@ -5,6 +5,7 @@ yum groupinstall "Development Tools"
 
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
+# 아래 부분이 제때 적용안됨. 확인 필요, 재접속 해야지댐 
 echo '# pyenv path' >> ~/.bashrc
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
