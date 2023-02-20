@@ -1,0 +1,20 @@
+[Unit]
+Description=Elasticsearch Cluster
+Documentation=https://www.elastic.co/kr/products/elasticsearch
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+RuntimeDirectory=elasticsearch-7.14.1
+WorkingDirectory=/usr/local/elasticsearch/elasticsearch
+
+LimitMEMLOCK=infinity
+LimitNOFILE=65535
+LimitNPROC=4096
+
+ExecStart=/usr/local/elasticsearch/bin/elasticsearch
+ExecReload=/usr/local/elasticsearch/bin/elasticsearch
+RestartSec=3
+
+User=elastic
+Group=elastic
